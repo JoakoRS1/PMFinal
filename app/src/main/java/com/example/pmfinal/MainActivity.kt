@@ -17,11 +17,12 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        replaceFragment(fitness)
+        replaceFragment(calculator)
+
 
         val bottomNav= findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.setOnItemSelectedListener {
 
+        bottomNav.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.calc -> replaceFragment(calculator)
                 R.id.settings->replaceFragment(settings)

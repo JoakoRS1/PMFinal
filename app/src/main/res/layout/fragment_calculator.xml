@@ -81,13 +81,52 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:background="#ED2626" />
-
-        <androidx.constraintlayout.widget.Barrier
+            android:layout_height="15dp"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:barrierDirection="top" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RM estimado ~"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvRMest"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ACÁ VA EL VAL"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/butGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:layout_weight="1"/>
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/butProgreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Progreso"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
