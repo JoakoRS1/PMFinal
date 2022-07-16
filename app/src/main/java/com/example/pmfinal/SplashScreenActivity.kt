@@ -8,7 +8,7 @@ class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, IntroActivity::class.java))
         finish()
     }
 }

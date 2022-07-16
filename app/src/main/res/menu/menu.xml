@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/calc"
+        android:icon="@drawable/ic_baseline_calculate_24"
+        android:title="Calculator"/>
+    <item
+        android:id="@+id/fit"
+        android:icon="@drawable/ic_baseline_fitness_center_24"
+        android:title="Fitness"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings"/>
+
+</menu>
