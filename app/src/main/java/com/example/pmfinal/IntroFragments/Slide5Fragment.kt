@@ -1,6 +1,7 @@
 package com.example.pmfinal.IntroFragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.pmfinal.Constantes
+import com.example.pmfinal.MainActivity
 import com.example.pmfinal.R
 
 class Slide5Fragment: Fragment() {
@@ -50,6 +52,8 @@ class Slide5Fragment: Fragment() {
 
         butNext.setOnClickListener{
             Toast.makeText(context, "Datos ingresados completamente.", Toast.LENGTH_SHORT).show()
+            startActivity(requireActivity().Intent(this, MainActivity::class.java))
+            finish()
 
         }
     }
