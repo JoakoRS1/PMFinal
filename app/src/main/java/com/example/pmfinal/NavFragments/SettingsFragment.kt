@@ -46,6 +46,5 @@ class SettingsFragment : Fragment() {
             ft!!.addToBackStack(null)
             ft!!.commit()
         }
-
     }
 }
