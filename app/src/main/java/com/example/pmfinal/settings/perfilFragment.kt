@@ -61,7 +61,6 @@ class perfilFragment:Fragment() {
         etePeso.setText(peso)
         tViIMC2.text = imc.toString()
 
-
         butActualizar.setOnClickListener {
             guardar(eteNombre.text.toString(), Constantes.SP_USERNAME)
             guardar(eteGenero.text.toString(), Constantes.SP_GENERO)
