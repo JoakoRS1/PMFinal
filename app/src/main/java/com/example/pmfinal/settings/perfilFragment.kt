@@ -48,10 +48,9 @@ class perfilFragment:Fragment() {
         val peso = sp.getString(Constantes.SP_PESO, "")
         val altura = sp.getString(Constantes.SP_ALTURA, "")
 
-        val alturametros= altura!!.toFloat()/100
-        Log.i("alturametros", alturametros.toString())
+        etePeso.text
 
-        val imc = (peso!!.toFloat()/(alturametros*alturametros)* 1000.00).roundToInt()/1000.00
+        val imc = (peso!!.toFloat()/(altura!!.toFloat()*altura.toFloat())* 100.00).roundToInt()/100.00
         Log.i("imc", imc.toString())
 
         eteNombre.setText(username)
@@ -59,7 +58,7 @@ class perfilFragment:Fragment() {
         eteAltura.setText(altura)
         eteEdad.setText(edad)
         etePeso.setText(peso)
-        tViIMC2.text = imc.toString()
+        tViIMC2.setText(imc.toString())
 
         butActualizar.setOnClickListener {
             guardar(eteNombre.text.toString(), Constantes.SP_USERNAME)
@@ -68,7 +67,7 @@ class perfilFragment:Fragment() {
             guardar(eteEdad.text.toString(), Constantes.SP_EDAD)
             guardar(etePeso.text.toString(), Constantes.SP_PESO)
 
-
+            tViIMC2.setText(imc.toString())
             Toast.makeText(context, "Actualizado!", Toast.LENGTH_SHORT).show()
         }
 
