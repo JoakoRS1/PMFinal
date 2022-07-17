@@ -1,100 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="162dp" />
+        android:background="#FF6464"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Perfil"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="15sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layoutNombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="197dp" />
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="13dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        tools:layout_editor_absoluteX="24dp">
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tViNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:text="Nombre    "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/eteNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutGenero"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="238dp" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNombre"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tViGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genero    "
+            android:textSize="20sp"
+            android:paddingVertical="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/eteGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutEdad"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="290dp" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGenero"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tViEdad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad      "
+            android:textSize="20sp"
+            android:paddingVertical="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/eteEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPeso"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="346dp" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEdad"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tViPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:text="Peso      "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etePeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAltura"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="397dp" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPeso"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="259dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="290dp" />
+        <TextView
+            android:id="@+id/tViAltura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altura     "
+            android:textSize="20sp"
+            android:paddingVertical="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
 
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="258dp"
-        android:layout_height="22dp"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="343dp" />
+        <EditText
+            android:id="@+id/eteAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="260dp"
-        android:layout_height="22dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="162dp" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="249dp"
-        android:layout_height="15dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="201dp" />
+    <LinearLayout
+        android:id="@+id/layoutIMC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAltura"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
+
+        <TextView
+            android:id="@+id/tViIMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMC         "
+            android:textSize="20sp"
+            android:paddingVertical="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tViIMC2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:text="settext"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="534dp" />
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="160dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
