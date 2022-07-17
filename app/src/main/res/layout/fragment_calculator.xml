@@ -100,11 +100,11 @@
 
             <TextView
                 android:id="@+id/tvRMest"
-                android:textAlignment="textEnd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ACÁ VA EL VAL"/>
+                android:text="0"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <Space
@@ -154,6 +154,16 @@
                 android:layout_height="wrap_content"
                 android:text="Progreso"
                 android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
 
