@@ -41,9 +41,9 @@ class Slide2Fragment : Fragment(){
                 guardarGeneroSP(genero)
                     //ir a siguiente slide
                 val ft = requireActivity().supportFragmentManager?.beginTransaction()
-                ft.replace(R.id.fcvIntro, fragmentslide)
-                ft.addToBackStack(null)
-                ft.commit()
+                ft!!.replace(R.id.fcvIntro, fragmentslide)
+                ft!!.addToBackStack(null)
+                ft!!.commit()
             }
             else{
                 Toast.makeText(context, "Selecciona una opción.", Toast.LENGTH_SHORT).show()

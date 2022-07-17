@@ -37,9 +37,9 @@ class Slide4Fragment : Fragment() {
                 //ir a siguiente slide
                     guardarAlturaSP(etName.text.toString())
                 val ft = requireActivity().supportFragmentManager?.beginTransaction()
-                ft.replace(R.id.fcvIntro, fragmentslide)
-                ft.addToBackStack(null)
-                ft.commit()
+                ft!!.replace(R.id.fcvIntro, fragmentslide)
+                ft!!.addToBackStack(null)
+                ft!!.commit()
             }
             else{
                 Toast.makeText(context, "Ingresar valor altura", Toast.LENGTH_SHORT).show()

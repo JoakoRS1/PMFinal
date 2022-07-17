@@ -37,9 +37,9 @@ class Slide3Fragment : Fragment() {
                     guardarPesoSP(etName.text.toString())
                 //ir a siguiente slide
                 val ft = requireActivity().supportFragmentManager?.beginTransaction()
-                ft.replace(R.id.fcvIntro, fragmentslide)
-                ft.addToBackStack(null)
-                ft.commit()
+                ft!!.replace(R.id.fcvIntro, fragmentslide)
+                ft!!.addToBackStack(null)
+                ft!!.commit()
             }
             else{
                 Toast.makeText(context, "Ingresar valor peso", Toast.LENGTH_SHORT).show()
