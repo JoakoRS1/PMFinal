@@ -46,12 +46,12 @@ class GestorEjercicios {
 
         daoEjercicios.insert(
             EjerciciosRoom(
-                result[0],
-                result[1],
+                result[0].capitalize(),
+                result[1].capitalize(),
                 result[2],
-                result[4],
-                result[5],
-                result[3]
+                result[4].capitalize(),
+                result[5].capitalize(),
+                result[3].capitalize()
             )
         )
         Log.d("seguardo", result[0])
