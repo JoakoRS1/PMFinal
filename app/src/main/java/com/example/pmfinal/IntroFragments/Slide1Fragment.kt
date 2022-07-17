@@ -37,9 +37,9 @@ class Slide1Fragment: Fragment() {
                     guardarNombreSP(etName.text.toString())
                 //ir a siguiente slide
                 val ft = requireActivity().supportFragmentManager?.beginTransaction()
-                ft.replace(R.id.fcvIntro, fragmentslide2)
-                ft.addToBackStack(null)
-                ft.commit()
+                ft!!.replace(R.id.fcvIntro, fragmentslide2)
+                ft!!.addToBackStack(null)
+                ft!!.commit()
             }
             else{
                 Toast.makeText(context, "Ingresar valor nombre", Toast.LENGTH_SHORT).show()

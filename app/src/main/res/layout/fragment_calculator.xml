@@ -48,11 +48,13 @@
                 android:textSize="20sp"/>
 
             <EditText
-                android:id="@+id/editTextReps"
+                android:id="@+id/etReps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="numberSigned" />
+                android:hint="Ej: 12"
+                android:inputType="numberSigned"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
         <Space
@@ -72,11 +74,13 @@
                 android:textSize="20sp"/>
 
             <EditText
-                android:id="@+id/editTextPeso"
+                android:id="@+id/etPeso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="numberSigned" />
+                android:hint="Ej: 60"
+                android:inputType="numberSigned"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
         <Space
@@ -106,16 +110,41 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/butCalcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Calcular" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <Button
                 android:id="@+id/butGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Guardar"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="Guardar" />
+
             <Space
                 android:layout_width="5dp"
                 android:layout_height="match_parent"/>
