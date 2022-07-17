@@ -19,7 +19,6 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_main)
         replaceFragment(calculator)
 
-
         val bottomNav= findViewById<BottomNavigationView>(R.id.bottomNav)
 
         bottomNav.setOnItemSelectedListener {
