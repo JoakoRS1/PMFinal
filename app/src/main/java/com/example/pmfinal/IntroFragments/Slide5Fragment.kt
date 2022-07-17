@@ -1,5 +1,6 @@
 package com.example.pmfinal.IntroFragments
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -52,9 +53,11 @@ class Slide5Fragment: Fragment() {
 
         butNext.setOnClickListener{
             Toast.makeText(context, "Datos ingresados completamente.", Toast.LENGTH_SHORT).show()
-            startActivity(requireActivity().Intent(this, MainActivity::class.java))
-            finish()
 
+
+            val i = Intent(getActivity(), MainActivity::class.java)
+            startActivity(i)
+            (getActivity() as Activity).overridePendingTransition(0, 0)
         }
     }
 }
