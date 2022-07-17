@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.R
+import com.example.pmfinal.models.beans.Ejercicio
 
-class ListadoExercisesAdapter (private val mListaExercises : List<String>,
-                               private val mOnItemClickListener : (NombreEjercicio : String) -> Unit) :
+class ListadoExercisesAdapter (private val mListaExercises : List<Ejercicio>,
+                               private val mOnItemClickListener : (NombreEjercicio : Ejercicio) -> Unit) :
     RecyclerView.Adapter<ListadoExercisesAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val tviExerciseName : TextView
@@ -29,13 +30,13 @@ class ListadoExercisesAdapter (private val mListaExercises : List<String>,
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tviExerciseName.text= mListaExercises[position]
+        holder.tviExerciseName.text= mListaExercises[position].name
         holder.itemView.setOnClickListener{
             mOnItemClickListener(mListaExercises[position])
         }
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return mListaExercises.size
     }
 }
