@@ -10,13 +10,13 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
 import com.example.pmfinal.R
+import progresoFragment
 import kotlin.math.round
 
 class CalculatorFragment : Fragment() {
+    private val progreso= progresoFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onCreateView(
@@ -34,6 +34,15 @@ class CalculatorFragment : Fragment() {
         var etReps =view.findViewById<EditText>(R.id.etReps)
         var etPeso =view.findViewById<EditText>(R.id.etPeso)
         val butCal = view.findViewById<Button>(R.id.butCalcular)
+
+        val butProgreso = view.findViewById<Button>(R.id.butProgreso)
+
+        butProgreso.setOnClickListener {
+            val ft = requireActivity().supportFragmentManager?.beginTransaction()
+            ft!!.replace(R.id.fragment_container_main, progreso)
+            ft!!.addToBackStack(null)
+            ft!!.commit()
+        }
 
 
         butCal?.setOnClickListener {
