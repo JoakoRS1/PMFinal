@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.R
-import com.example.pmfinal.models.beans.Ejercicio
 import org.json.JSONObject
 
 class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
