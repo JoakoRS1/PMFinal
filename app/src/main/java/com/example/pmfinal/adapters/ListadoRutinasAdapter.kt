@@ -43,7 +43,6 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var ejr= mListaExercises[position].getJSONArray("ejercicios")
-
         var l_ejercicios= ""
 
         for (i in 0 until ejr.length()){
