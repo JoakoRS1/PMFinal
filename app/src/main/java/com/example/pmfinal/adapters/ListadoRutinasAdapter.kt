@@ -1,6 +1,7 @@
 package com.example.pmfinal.adapters
 
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +41,7 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
         holder.tvPreviewEj.text= "Ejercicio "+(position+1).toString()
 
         holder.butIniciar.setOnClickListener{
-
+            Log.d("ruti","empezó!!")
         }
 
 

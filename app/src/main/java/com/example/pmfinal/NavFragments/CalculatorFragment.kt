@@ -46,14 +46,8 @@ class CalculatorFragment : Fragment() {
 
         val butGuardar = view.findViewById<Button>(R.id.butGuardar)
 
-        val butProgreso = view.findViewById<Button>(R.id.butProgreso)
 
-        butProgreso.setOnClickListener {
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
-            ft!!.replace(R.id.fragment_container_main, progreso)
-            ft!!.addToBackStack(null)
-            ft!!.commit()
-        }
+        if(lista_RM.size!=0) cargarListaRM(lista_RM)
 
         butCal?.setOnClickListener {
 
