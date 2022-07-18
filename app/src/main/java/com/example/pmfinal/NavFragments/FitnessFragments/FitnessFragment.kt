@@ -42,12 +42,26 @@ class FitnessFragment : Fragment() {
         rvRutinas=view.findViewById(R.id.rvRutinas)
 
 
+
         var rutinas= RutinaCreate().ObtenerRutinas(requireContext())
 
-        Log.d("cantidad de rutinas", rutinas.size.toString())
+        Log.d("cantidad de rutinas", rutinas.length().toString())
 
 
-        val adapter= ListadoRutinasAdapter(rutinas)
+        val adapter= ListadoRutinasAdapter(rutinas){
+            //enviar datos de ejercicio
+            val bundle= Bundle()
+            bundle.putString("Ejercicios", it.toString())
+            bundle.putString("NUM_EJER", "1")
+
+            val empezarRutina= EmpezarRutina()
+            empezarRutina.arguments= bundle
+
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_container_main, empezarRutina)
+            ft.addToBackStack(null)
+            ft.commit()
+        }
         rvRutinas.adapter=adapter
 
         newRutina.setOnClickListener {

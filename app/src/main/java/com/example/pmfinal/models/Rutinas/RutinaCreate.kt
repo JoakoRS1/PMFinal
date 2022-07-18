@@ -55,8 +55,8 @@ class RutinaCreate{
         return numRutina.toInt()
     }
 
-    fun ObtenerRutinas(context: Context):List<JSONObject>{
-        var arrjson= mutableListOf<JSONObject>()
+    fun ObtenerRutinas(context: Context):JSONArray{
+        var arrjson= JSONArray()
         try{
             var rutinasCreadas= (verificarRutinaActual(context)).toInt()
             Log.d("rutinascreadas",rutinasCreadas.toString())
@@ -66,7 +66,7 @@ class RutinaCreate{
                 context.openFileInput("Rutina" + (j+1).toString() + ".json").use {
                     var json =it.bufferedReader().readText()
                     var jsonobj= JSONObject(json)
-                    arrjson.add(jsonobj)
+                    arrjson.put(jsonobj)
                 }
                 j++
             }
@@ -98,11 +98,11 @@ class RutinaCreate{
 
 
 
-/*
+
             context.openFileOutput("Rutina"+rutinaAEditar.toString()+".json", Context.MODE_PRIVATE)
                 .use {
                     it.write(rutinaUpdate.toString().toByteArray())
-                }*/
+                }
         }
 
     }
