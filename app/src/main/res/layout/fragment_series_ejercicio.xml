@@ -80,19 +80,21 @@
             android:gravity="center"
             android:text="1" />
 
-        <TextView
+        <EditText
             android:id="@+id/etKG"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center" />
+            android:gravity="center"
+            android:hint="0"/>
 
-        <TextView
+        <EditText
             android:id="@+id/etReps"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center" />
+            android:gravity="center"
+            android:hint="0"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

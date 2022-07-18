@@ -7,30 +7,32 @@
 
     <TextView
         android:id="@+id/tvRutinaCreada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="31dp"
         android:layout_marginTop="16dp"
         android:text="Rutina 1"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvPreviewEj"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="332dp"
+        android:layout_height="27dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRutinaCreada" />
 
     <Button
         android:id="@+id/butIniciarRutina"
-        android:layout_width="333dp"
-        android:layout_height="36dp"
+        android:layout_width="336dp"
+        android:layout_height="35dp"
         android:layout_marginStart="39dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="39dp"
@@ -38,6 +40,18 @@
         android:text="Empezar Rutina"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPreviewEj" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPreviewEj"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
