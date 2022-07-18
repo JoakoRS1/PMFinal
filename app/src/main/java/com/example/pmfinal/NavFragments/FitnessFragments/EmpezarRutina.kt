@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.R
 import com.example.pmfinal.adapters.ListadoSeriesAdapter
+import com.example.pmfinal.adapters.ListadoSeriesInicioAdapter
 import com.example.pmfinal.models.serie
 import org.json.JSONArray
 import org.json.JSONObject
@@ -41,9 +42,8 @@ class EmpezarRutina: Fragment()  {
 
         ejpresentado.text=ejercicioPresente.getString("nombre")
 /*
-        val series: List<serie> = ejercicioPresente.get("serie") as List<serie>
-
-        val adapter= ListadoSeriesAdapter(series)
+        val series = List<serie>(ejercicioPresente.getJSONArray("serie"))
+        val adapter= ListadoSeriesInicioAdapter(series)
         rvSeriesInicio.adapter=adapter*/
     }
 
