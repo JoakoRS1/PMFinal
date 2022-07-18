@@ -5,12 +5,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.pmfinal.R
+import com.example.pmfinal.models.Rutinas.RutinaCreate
 
 class DetallesFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,14 +38,32 @@ class DetallesFragment : Fragment() {
         val name= (arguments?.getString("NOMBRE_EJERCICIO"))
         val equipment= arguments?.getString("EQUIPMENT")
         val gif= arguments?.getString("GIF_URL")
+
+
         val target= arguments?.getString("TARGET")
 
         val urlgif= gif?.toUri()
+        Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
         val descripcion= "Needed Equipment: "+equipment!! +".\n\nTarget area: "+target!!
-
         tvDescripcionEjercicio.text=descripcion
         tvNombreEjercicioDetalle.text=name
 
-        Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
+        val butElegir= view.findViewById<Button>(R.id.butElegir)
+
+
+        butElegir.setOnClickListener{
+            val bundle= Bundle()
+            bundle.putString("NOMBRE_EJERCICIO", name)
+
+
+            val fragSeries= SeriesFragment()
+            fragSeries.arguments= bundle
+
+            //Ir a FragmentEjercicios
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_container_main, fragSeries)
+            ft.addToBackStack(null)
+            ft.commit()
+        }
     }
 }

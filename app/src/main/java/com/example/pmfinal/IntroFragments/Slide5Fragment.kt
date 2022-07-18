@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import com.example.pmfinal.Constantes
 import com.example.pmfinal.MainActivity
 import com.example.pmfinal.R
+import com.example.pmfinal.models.Rutinas.RutinaCreate
 
 class Slide5Fragment: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +49,7 @@ class Slide5Fragment: Fragment() {
         tvGenero.setText(genero)
         tvAltura.setText(altura)
         tvPeso.setText(peso)
-
+         //se crea el archivo rutinas
 
 
         butNext.setOnClickListener{
