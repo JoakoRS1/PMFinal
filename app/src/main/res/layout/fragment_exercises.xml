@@ -18,6 +18,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/layoutNuevo"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        android:layout_marginHorizontal="24dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
+
+        <ImageView
+            android:id="@+id/imgEjercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <TextView
+            android:id="@+id/tviExerciseNameItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:text="Nuevo Ejercicio" />
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNuevo"
+        android:layout_height="95dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExercises"
         android:layout_width="353dp"
@@ -26,7 +60,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/espacio"
         tools:itemCount="5"
         tools:listitem="@layout/item_exercise" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
