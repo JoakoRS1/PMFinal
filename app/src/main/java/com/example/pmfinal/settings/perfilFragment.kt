@@ -39,7 +39,7 @@ class perfilFragment:Fragment() {
         var eteAltura= view.findViewById<EditText>(R.id.eteAltura)
         var eteEdad= view.findViewById<EditText>(R.id.eteEdad)
         var etePeso= view.findViewById<EditText>(R.id.etePeso)
-        var tViIMC2= view.findViewById<TextView>(R.id.tViIMC2)
+
 
         val sp = requireActivity().getSharedPreferences(Constantes.NOMBRE_SP, Context.MODE_PRIVATE)
         val username = sp.getString(Constantes.SP_USERNAME, "")
@@ -47,6 +47,7 @@ class perfilFragment:Fragment() {
         val edad = sp.getString(Constantes.SP_EDAD, "")
         val peso = sp.getString(Constantes.SP_PESO, "")
         val altura = sp.getString(Constantes.SP_ALTURA, "")
+        var tViIMC2= view.findViewById<TextView>(R.id.tViIMC2)
 
         etePeso.text
 
@@ -60,6 +61,7 @@ class perfilFragment:Fragment() {
         etePeso.setText(peso)
         tViIMC2.setText(imc.toString())
 
+
         butActualizar.setOnClickListener {
             guardar(eteNombre.text.toString(), Constantes.SP_USERNAME)
             guardar(eteGenero.text.toString(), Constantes.SP_GENERO)
@@ -67,7 +69,14 @@ class perfilFragment:Fragment() {
             guardar(eteEdad.text.toString(), Constantes.SP_EDAD)
             guardar(etePeso.text.toString(), Constantes.SP_PESO)
 
-            tViIMC2.setText(imc.toString())
+            var tViIMCN= view.findViewById<TextView>(R.id.tViIMC2)
+
+            val pesoN = sp.getString(Constantes.SP_PESO, "")
+            val alturaN = sp.getString(Constantes.SP_ALTURA, "")
+            val imcN = (pesoN!!.toFloat()/(alturaN!!.toFloat()*alturaN.toFloat())* 100.00).roundToInt()/100.00
+
+            tViIMCN.setText(imcN.toString())
+
             Toast.makeText(context, "Actualizado!", Toast.LENGTH_SHORT).show()
         }
 
