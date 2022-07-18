@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.pmfinal.R
 import com.example.pmfinal.models.beans.Ejercicio
 import kotlinx.coroutines.NonDisposableHandle.parent
@@ -24,6 +25,7 @@ class ListadoExercisesAdapter (private val mListaExercises : List<Ejercicio>,
         init{
             tviExerciseName= view.findViewById(R.id.tviExerciseNameItem)
             imgEjercicio = view.findViewById(R.id.imgEjercicio)
+            var contextx = view
         }
     }
 
@@ -42,13 +44,8 @@ class ListadoExercisesAdapter (private val mListaExercises : List<Ejercicio>,
         holder.tviExerciseName.text= mListaExercises[position].name
 
         val urlgif = mListaExercises[position].gifUrl.toUri()
-        val imageUri: Uri = mListaExercises[position].gifUrl.toUri()
 
-        /*val bitmap: Bitmap = MediaStore.Images.Media.getBitmap(parent.context.getContentResolver(), Uri.parse(
-            imageUri.toString()
-        ))*/
-
-        //holder.imgEjercicio.setImageResource(mListaExercises[position].gifUrl.toInt())
+        Glide.with(holder.itemView).asBitmap().load(urlgif).into(holder.imgEjercicio)
 
         holder.itemView.setOnClickListener{
             mOnItemClickListener(mListaExercises[position])
