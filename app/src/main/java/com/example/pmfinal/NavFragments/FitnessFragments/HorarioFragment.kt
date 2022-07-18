@@ -51,7 +51,6 @@ class HorarioFragment: Fragment() {
         cambiarcolor(butSab, dias)
 
         GuardarHorario.setOnClickListener{
-
         }
 
     }
