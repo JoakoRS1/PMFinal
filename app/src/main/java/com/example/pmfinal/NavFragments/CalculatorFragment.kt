@@ -10,10 +10,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pmfinal.Constantes.listaRm.Companion.lista_RM
 import com.example.pmfinal.ListAdapter
 import com.example.pmfinal.R
 import com.example.pmfinal.models.RM
 import progresoFragment
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.math.round
 
 class CalculatorFragment : Fragment() {
@@ -53,6 +56,9 @@ class CalculatorFragment : Fragment() {
         }
 
 
+
+
+
         butCal?.setOnClickListener {
 
             val txtReps=etReps!!.getText()
@@ -68,19 +74,35 @@ class CalculatorFragment : Fragment() {
             }
         }
         butGuardar.setOnClickListener{
+            val txtReps=etReps!!.getText()
+            val txtPeso=etPeso!!.getText()
+            val tvRMest = view.findViewById<TextView>(R.id.tvRMest)
+            if (txtReps.length>0 && txtPeso.length>0){
 
-            val RPMAX ="123";
-            val fechaMAX = "123";
-            val actualrm = RM(RPMAX,fechaMAX,"");
 
 
 
-            lista.add(actualrm)
-            Log.d("se hizo clic", lista[0].toString())
-            cargarListaRM(lista)
+                var peso = round(txtPeso!!.toString().toInt() / ( 1.0278 - 0.0278 * txtReps!!.toString().toInt() ))
+                tvRMest.setText(peso.toString())
+
+                val sdf = SimpleDateFormat("dd/M/yyyy")
+                val currentDate = sdf.format(Date())
+
+                val RPMAX =peso.toString();
+                val fechaMAX = currentDate ;
+                val actualrm = RM(RPMAX,fechaMAX,"");
+
+
+
+            }
+            else{
+                tvRMest.setText("Ingrese algun dato")
+            }
         }
 
 
+                lista_RM.add(actualrm)
+                cargarListaRM(lista_RM)
 
     }
     private fun cargarListaRM(lista: List<RM>) {
