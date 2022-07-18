@@ -6,13 +6,14 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="344dp"
-        android:layout_height="272dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="228dp"
+        android:layout_height="259dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:listitem="@layout/item_series_nuevo_ej" />
 
     <TextView
         android:id="@+id/tvRutinaIniciadaNom"
@@ -29,8 +30,39 @@
         android:id="@+id/linearLayout4"
         android:layout_width="332dp"
         android:layout_height="57dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/tvRutinaIniciadaNom"
-        tools:layout_editor_absoluteX="35dp"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutinaIniciadaNom">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SERIE" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="KG" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="REPS" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Done" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
