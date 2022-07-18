@@ -55,10 +55,6 @@ class CalculatorFragment : Fragment() {
             ft!!.commit()
         }
 
-
-
-
-
         butCal?.setOnClickListener {
 
             val txtReps=etReps!!.getText()
