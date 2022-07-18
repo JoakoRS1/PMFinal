@@ -25,7 +25,6 @@ class ListadoExercisesAdapter (private val mListaExercises : List<Ejercicio>,
         init{
             tviExerciseName= view.findViewById(R.id.tviExerciseNameItem)
             imgEjercicio = view.findViewById(R.id.imgEjercicio)
-            var contextx = view
         }
     }
 
