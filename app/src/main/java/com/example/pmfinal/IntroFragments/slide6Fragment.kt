@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment
 import com.example.pmfinal.Constantes
 import com.example.pmfinal.R
 
-class Slide4Fragment : Fragment() {
-    private val fragmentslide = slide6Fragment()
+class slide6Fragment : Fragment() {
+    private val fragmentslide = Slide5Fragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity?.title = "Slide2"
@@ -23,8 +23,9 @@ class Slide4Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.slide_4, container, false)
+        return inflater.inflate(R.layout.slide_6, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -35,7 +36,7 @@ class Slide4Fragment : Fragment() {
             if (etName.text.toString() != ""){
                 //guardar nombre
                 //ir a siguiente slide
-                    guardarAlturaSP(etName.text.toString())
+                guardarEdadSP(etName.text.toString())
                 val ft = requireActivity().supportFragmentManager?.beginTransaction()
                 ft!!.replace(R.id.fcvIntro, fragmentslide)
                 ft!!.addToBackStack(null)
@@ -46,16 +47,16 @@ class Slide4Fragment : Fragment() {
             }
 
 
-
         }
     }
 
-    private fun guardarAlturaSP(altura: String) {
+
+    private fun guardarEdadSP(peso: String) {
         val editor = requireActivity().getSharedPreferences(
             Constantes.NOMBRE_SP,
             AppCompatActivity.MODE_PRIVATE
         ).edit()
-        editor.putString(Constantes.SP_ALTURA, altura)
+        editor.putString(Constantes.SP_EDAD, peso)
         editor.commit()
     }
 }

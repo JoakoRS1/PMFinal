@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.get
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.Constantes
@@ -43,6 +44,7 @@ class SeriesFragment:Fragment() {
 
         val etkg=view.findViewById<EditText>(R.id.etKG)
         val etReps=view.findViewById<EditText>(R.id.etReps)
+        val butAgregarHorario= view.findViewById<Button>(R.id.butNewHorario)
 
 
         val ej_nom=arguments?.getString("NOMBRE_EJERCICIO")
@@ -66,6 +68,16 @@ class SeriesFragment:Fragment() {
             ft.replace(R.id.fragment_container_main, fragFitness)
             ft.commit()
 
+
+        }
+
+
+        butAgregarHorario.setOnClickListener{
+            //Ir a FragmentHorario
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_container_main, HorarioFragment())
+            ft.addToBackStack(null)
+            ft.commit()
 
         }
 

@@ -1,5 +1,7 @@
 package com.example.pmfinal
 
+import com.example.pmfinal.models.RM
+
 class Constantes {
     companion object {
         val NOMBRE_SP = "SP_GYMBRO"
@@ -20,6 +22,11 @@ class Constantes {
             val NOTIFICATION_CHANNEL_ID = "1"
             val NOTIFICATION_CHANNEL_NAME = "LOGIN"
             val NOTIFICATION_CHANNEL_DESCRIPTION = "Notification channel"
+        }
+    }
+    class listaRm{
+        companion object{
+            val lista_RM = mutableListOf<RM>()
         }
     }
 

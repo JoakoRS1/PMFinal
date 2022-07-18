@@ -59,7 +59,7 @@ class DetallesFragment : Fragment() {
             val fragSeries= SeriesFragment()
             fragSeries.arguments= bundle
 
-            //Ir a FragmentEjercicios
+            //Ir a FragmentSeries
             val ft = requireActivity().supportFragmentManager.beginTransaction()
             ft.replace(R.id.fragment_container_main, fragSeries)
             ft.addToBackStack(null)
