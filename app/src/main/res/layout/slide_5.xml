@@ -22,10 +22,10 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="80dp"
-        android:text="Por favor, comprueba tus datos"
+        android:layout_marginEnd="40dp"
+        android:text="Estos datos has ingresado\n (Recuerda que puedes editarlos en Perfil)"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Género:"
+            android:text="Género"
             android:textSize="20sp" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rango de Edad:"
+            android:text="Edad"
             android:textSize="20sp" />
 
         <TextView

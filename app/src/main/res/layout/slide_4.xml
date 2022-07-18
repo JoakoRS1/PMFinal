@@ -35,7 +35,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="272dp"
         android:ems="10"
-        android:hint="Ejm: 180cm"
+        android:hint="Ejm: 1.80m"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
