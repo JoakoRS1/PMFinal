@@ -6,7 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.R
+import com.example.pmfinal.adapters.ListadoSeriesAdapter
+import com.example.pmfinal.models.serie
+import org.json.JSONArray
+import org.json.JSONObject
 
 class EmpezarRutina: Fragment()  {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +31,20 @@ class EmpezarRutina: Fragment()  {
         super.onViewCreated(view, savedInstanceState)
 
         val ejpresentado= view.findViewById<TextView>(R.id.tvRutinaIniciadaNom)
+        val rvSeriesInicio= view.findViewById<RecyclerView>(R.id.rvSeriesInicio)
 
+        val ejercicios= JSONArray(arguments?.getString("Ejercicios"))
+        var num_ej= arguments?.getString("NUM_EJER")!!.toInt()
+
+        val ejercicioPresente= ejercicios[num_ej] as JSONObject
+        num_ej++
+
+        ejpresentado.text=ejercicioPresente.getString("nombre")
+/*
+        val series: List<serie> = ejercicioPresente.get("serie") as List<serie>
+
+        val adapter= ListadoSeriesAdapter(series)
+        rvSeriesInicio.adapter=adapter*/
     }
 
 }

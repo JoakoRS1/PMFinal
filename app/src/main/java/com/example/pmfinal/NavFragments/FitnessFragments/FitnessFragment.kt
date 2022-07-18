@@ -51,7 +51,7 @@ class FitnessFragment : Fragment() {
             //enviar datos de ejercicio
             val bundle= Bundle()
             bundle.putString("Ejercicios", it.toString())
-            bundle.putString("NUM_EJER", "1")
+            bundle.putString("NUM_EJER", "0")
 
             val empezarRutina= EmpezarRutina()
             empezarRutina.arguments= bundle
