@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSeriesInicio"
-        android:layout_width="228dp"
-        android:layout_height="259dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        tools:listitem="@layout/item_series_nuevo_ej" />
-
     <TextView
         android:id="@+id/tvRutinaIniciadaNom"
         android:layout_width="298dp"
@@ -27,6 +16,30 @@
         app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/cronometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutinaIniciadaNom"
+        app:layout_constraintVertical_bias="1.0"
+        android:paddingBottom="5dp">
+
+    </Chronometer>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSeriesInicio"
+        android:layout_width="228dp"
+        android:layout_height="259dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:listitem="@layout/item_series_nuevo_ej" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"

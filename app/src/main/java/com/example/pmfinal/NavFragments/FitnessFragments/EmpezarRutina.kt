@@ -1,9 +1,11 @@
 package com.example.pmfinal.NavFragments.FitnessFragments
 
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Chronometer
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
@@ -30,8 +32,12 @@ class EmpezarRutina: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val chronometro = view.findViewById<Chronometer>(R.id.cronometro)
         val ejpresentado= view.findViewById<TextView>(R.id.tvRutinaIniciadaNom)
         val rvSeriesInicio= view.findViewById<RecyclerView>(R.id.rvSeriesInicio)
+
+        chronometro.base = SystemClock.elapsedRealtime()
+        chronometro.start()
 
         val ejercicios= JSONArray(arguments?.getString("Ejercicios"))
         var num_ej= arguments?.getString("NUM_EJER")!!.toInt()
