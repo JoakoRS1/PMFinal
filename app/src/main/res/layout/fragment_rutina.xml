@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rutinaNum"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="302dp"
+        android:text="rutina #"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEjercicio"
+        android:layout_width="297dp"
+        android:layout_height="138dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutinfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rutinaNum"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <LinearLayout
+        android:id="@+id/layoutinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvEjercicio"
+        android:layout_marginHorizontal="34dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="13dp">
+
+        <TextView
+            android:id="@+id/tViserie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERIE                 "
+            android:textSize="20sp"
+            android:paddingVertical="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tVikg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:text="KG                "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tVireps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:text="REPS          "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
