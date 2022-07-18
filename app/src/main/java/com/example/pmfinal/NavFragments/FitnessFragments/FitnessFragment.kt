@@ -47,7 +47,6 @@ class FitnessFragment : Fragment() {
 
         Log.d("cantidad de rutinas", rutinas.length().toString())
 
-
         val adapter= ListadoRutinasAdapter(rutinas){
             //enviar datos de ejercicio
             val bundle= Bundle()
