@@ -13,7 +13,7 @@ import com.example.pmfinal.models.serie
 import org.json.JSONArray
 import org.json.JSONObject
 
-class ListadoSeriesInicioAdapter (private val mListaSeries:JSONArray):
+class ListadoSeriesInicioAdapter (private val mListaSeries: List<serie>):
     RecyclerView.Adapter<ListadoSeriesInicioAdapter.ViewHolder>(){
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
@@ -45,7 +45,7 @@ class ListadoSeriesInicioAdapter (private val mListaSeries:JSONArray):
     }
 
     override fun getItemCount(): Int {
-        return mListaSeries.length()
+        return mListaSeries.size
     }
 
 

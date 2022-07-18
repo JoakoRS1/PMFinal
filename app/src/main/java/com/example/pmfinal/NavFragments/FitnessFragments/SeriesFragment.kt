@@ -110,6 +110,7 @@ class SeriesFragment:Fragment() {
         rvSeries.adapter=adapter
     }
     fun crearOactualizarRutina(context:Context, series: List<serie>,ejercicio:String){
+
         val ejercicioJson= JSONObject()
         ejercicioJson.put("nombre",ejercicio)
         ejercicioJson.put("serie",series)

@@ -2,6 +2,7 @@ package com.example.pmfinal.NavFragments.FitnessFragments
 
 import android.os.Bundle
 import android.os.SystemClock
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ import com.example.pmfinal.adapters.ListadoSeriesInicioAdapter
 import com.example.pmfinal.models.serie
 import org.json.JSONArray
 import org.json.JSONObject
+import java.util.*
 
 class EmpezarRutina: Fragment()  {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,10 +49,14 @@ class EmpezarRutina: Fragment()  {
         num_ej++
 
         ejpresentado.text=ejercicioPresente.getString("nombre")
-/*
-        val series = List<serie>(ejercicioPresente.getJSONArray("serie"))
+
+        /*val series = mutableListOf<serie>(ejercicioPresente.get("serie")as serie)
+        Log.d("listaseries", series.toString())
+
+
         val adapter= ListadoSeriesInicioAdapter(series)
         rvSeriesInicio.adapter=adapter*/
-    }
+}
+
 
 }
