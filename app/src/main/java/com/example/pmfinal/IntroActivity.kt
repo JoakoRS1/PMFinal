@@ -17,7 +17,7 @@ class IntroActivity : AppCompatActivity() {
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }else {
+        }else {//primera vez
             setContentView(R.layout.activity_intro)
             val ft = supportFragmentManager.beginTransaction()
             ft.replace(R.id.fcvIntro, fragmentslide1)
@@ -31,8 +31,5 @@ class IntroActivity : AppCompatActivity() {
         val username = sp.getString(Constantes.SP_USERNAME, "")!!
 
         return username != ""
-
-
-
     }
 }

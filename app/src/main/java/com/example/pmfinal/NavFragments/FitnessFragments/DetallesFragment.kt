@@ -12,11 +12,9 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.pmfinal.R
-import com.example.pmfinal.settings.perfilFragment
+import com.example.pmfinal.models.Rutinas.RutinaCreate
 
 class DetallesFragment : Fragment() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -33,33 +31,39 @@ class DetallesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragRutina= RutinaFragment()
-
         val tvNombreEjercicioDetalle= view.findViewById<TextView>(R.id.tvNombreEjercicioDetalle)
         val ivDetailGif= view.findViewById<ImageView>(R.id.ivGIFDETALLE)
         val tvDescripcionEjercicio= view.findViewById<TextView>(R.id.tvDescripcionEjercicio)
-        val butElegir= view.findViewById<Button>(R.id.butElegir)
 
         val name= (arguments?.getString("NOMBRE_EJERCICIO"))
         val equipment= arguments?.getString("EQUIPMENT")
         val gif= arguments?.getString("GIF_URL")
+
+
         val target= arguments?.getString("TARGET")
 
         val urlgif= gif?.toUri()
+        Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
         val descripcion= "Needed Equipment: "+equipment!! +".\n\nTarget area: "+target!!
-
         tvDescripcionEjercicio.text=descripcion
         tvNombreEjercicioDetalle.text=name
 
-        Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
+        val butElegir= view.findViewById<Button>(R.id.butElegir)
 
 
-        butElegir.setOnClickListener {
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
-            ft!!.replace(R.id.fragment_container_main, fragRutina)
-            ft!!.addToBackStack(null)
-            ft!!.commit()
+        butElegir.setOnClickListener{
+            val bundle= Bundle()
+            bundle.putString("NOMBRE_EJERCICIO", name)
+
+
+            val fragSeries= SeriesFragment()
+            fragSeries.arguments= bundle
+
+            //Ir a FragmentEjercicios
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_container_main, fragSeries)
+            ft.addToBackStack(null)
+            ft.commit()
         }
-
     }
 }

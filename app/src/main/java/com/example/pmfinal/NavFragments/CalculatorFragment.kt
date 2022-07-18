@@ -21,7 +21,7 @@ import kotlin.math.round
 import kotlin.Array
 
 class CalculatorFragment : Fragment() {
-    private lateinit var rms : RecyclerView
+    private lateinit var rVrm : RecyclerView
     private val progreso= progresoFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class CalculatorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rms =view.findViewById(R.id.rVrm)
+        rVrm =view.findViewById(R.id.rVrm)
         var lista = mutableListOf<RM>()
         var etReps =view.findViewById<EditText>(R.id.etReps)
         var etPeso =view.findViewById<EditText>(R.id.etPeso)
@@ -75,29 +75,21 @@ class CalculatorFragment : Fragment() {
             val RPMAX ="123";
             val fechaMAX = "123";
             val actualrm = RM(RPMAX,fechaMAX,"");
+
             lista.add(actualrm)
-            init()
+            cargarListaRM(lista)
         }
 
 
 
     }
-    private fun init(){
-        var elementos2 : List<RM>
-        var elementos = mutableListOf<RM>()
-        val RPMAX ="123";
-        val fechaMAX = "123";
-        val actualrm = RM(RPMAX,fechaMAX,"");
-        elementos.add(actualrm)
-
-        val adapter = ListAdapter(elementos,requireContext())
-
-        var rView = view?.findViewById<RecyclerView>(R.id.rVrm)
-        rView?.setHasFixedSize(true)
-        rView?.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-        rView?.adapter = adapter
-
+    private fun cargarListaRM(lista: List<RM>) {
+        val adapter = ListAdapter(lista) {
+            Log.i("PlanetasFragment", "Se hizo click en el planeta " + it.repM);
+        }
+        rVrm.adapter = adapter
     }
+
 
 
 
