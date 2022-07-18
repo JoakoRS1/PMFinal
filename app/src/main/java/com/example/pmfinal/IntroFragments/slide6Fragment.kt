@@ -46,8 +46,6 @@ class slide6Fragment : Fragment() {
                 Toast.makeText(context, "Ingresar valor altura", Toast.LENGTH_SHORT).show()
             }
 
-
-
         }
     }
 
