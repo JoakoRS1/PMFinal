@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.get
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.Constantes
@@ -20,6 +21,7 @@ import com.example.pmfinal.models.serie
 import org.json.JSONObject
 
 class SeriesFragment:Fragment() {
+    val bodyPartsfragment = BodyPartsFragment()
     private lateinit var rvSeries : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,7 @@ class SeriesFragment:Fragment() {
         val nombreEjercicio= view.findViewById<TextView>(R.id.tvEjNombre)
         val butAgregarSerie= view.findViewById<Button>(R.id.butNewSerie)
         val butSave= view.findViewById<Button>(R.id.butSaveSeries)
+        val butEjercicio = view.findViewById<Button>(R.id.AgregarEjercicio)
 
         val etkg=view.findViewById<EditText>(R.id.etKG)
         val etReps=view.findViewById<EditText>(R.id.etReps)
@@ -64,6 +67,19 @@ class SeriesFragment:Fragment() {
                 cargarSeries(series)
             }
 
+        }
+        butEjercicio.setOnClickListener {
+            val editor = requireActivity().getSharedPreferences(
+                Constantes.NOMBRE_SP,
+                AppCompatActivity.MODE_PRIVATE
+            ).edit()
+            editor.putString(Constantes.RUT_EDITED, "") //LA RUTINA SE DEBE CREAR
+            editor.commit()
+
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
+            ft.replace(R.id.fragment_container_main, bodyPartsfragment)
+            ft.addToBackStack(null)
+            ft.commit()
         }
         butSave.setOnClickListener{
             var ultimateListadoSeries= series

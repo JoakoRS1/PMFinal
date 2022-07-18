@@ -43,11 +43,11 @@
             android:id="@+id/tViserie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SERIE                 "
-            android:textSize="20sp"
             android:paddingVertical="8sp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@color/black"/>
+            android:text="SERIE                 "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tVikg"
