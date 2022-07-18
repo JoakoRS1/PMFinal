@@ -70,7 +70,7 @@ class BodyPartsFragment : Fragment() {
             fragEjercicios.arguments= bundle
 
             //Ir a FragmentEjercicios
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
             ft.replace(R.id.fragment_container_main, fragEjercicios)
             ft.addToBackStack(null)
             ft.commit()
