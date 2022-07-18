@@ -56,6 +56,7 @@ class EjerciciosFragment:Fragment() {
             ft.addToBackStack(null)
             ft.commit()
         }
+
         recyclerView.adapter=adapter
     }
 }
