@@ -15,30 +15,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvNumRep"
+            android:id="@+id/tvRVNumSeries"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:text="1"/>
 
-        <EditText
-            android:id="@+id/etKG"
+        <TextView
+            android:id="@+id/etRVKG"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:hint="0"
-            android:inputType="number"
-            android:singleLine="false" />
+            android:gravity="center" />
 
-        <EditText
-            android:id="@+id/etReps"
+        <TextView
+            android:id="@+id/etRVReps"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
-            android:hint="0"
-            android:inputType="number" />
+            android:gravity="center" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
