@@ -47,7 +47,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp">
 
             <TextView
                 android:id="@+id/textView9"
@@ -74,7 +76,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,7 +104,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -132,7 +138,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Guardar" />
+                android:text="Guardar"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"/>
 
             <Space
                 android:layout_width="5dp"
@@ -143,7 +151,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Calcular" />
+                android:text="Calcular"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"/>
 
         </LinearLayout>
 
@@ -155,7 +165,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rVrm"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="449dp"
                 android:background="#FF6464"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/list_listas_1rm" />
