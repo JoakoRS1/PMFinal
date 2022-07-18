@@ -72,11 +72,15 @@ class CalculatorFragment : Fragment() {
             }
         }
         butGuardar.setOnClickListener{
+
             val RPMAX ="123";
             val fechaMAX = "123";
             val actualrm = RM(RPMAX,fechaMAX,"");
 
+
+
             lista.add(actualrm)
+            Log.d("se hizo clic", lista[0].toString())
             cargarListaRM(lista)
         }
 
@@ -84,8 +88,9 @@ class CalculatorFragment : Fragment() {
 
     }
     private fun cargarListaRM(lista: List<RM>) {
+        Log.d("se hizo clic", lista[0].toString())
         val adapter = ListAdapter(lista) {
-            Log.i("PlanetasFragment", "Se hizo click en el planeta " + it.repM);
+            Log.i("Fragment", "Se hizo click en el " + it.repM);
         }
         rVrm.adapter = adapter
     }

@@ -25,7 +25,7 @@ import android.widget.TextView
 
      }
 
-     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.ViewHolder {
          val view = LayoutInflater.from(parent.context)
              .inflate(R.layout.list_listas_1rm, parent, false)
 
