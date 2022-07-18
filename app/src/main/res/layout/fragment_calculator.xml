@@ -176,7 +176,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rVrm"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="300sp"
+                tools:listitem="@layout/list_listas_1rm"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:background="@color/purple_200"/>
         </LinearLayout>
 
 
