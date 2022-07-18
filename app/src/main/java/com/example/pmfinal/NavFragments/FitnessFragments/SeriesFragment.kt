@@ -67,10 +67,7 @@ class SeriesFragment:Fragment() {
             val ft = requireActivity().supportFragmentManager.beginTransaction()
             ft.replace(R.id.fragment_container_main, fragFitness)
             ft.commit()
-
-
         }
-
 
         butAgregarHorario.setOnClickListener{
             //Ir a FragmentHorario
@@ -95,6 +92,7 @@ class SeriesFragment:Fragment() {
             Constantes.NOMBRE_SP,
             Context.MODE_PRIVATE
         )
+
         val en_edicion = sp.getString(Constantes.RUT_EDITED, "")!!
 
         if (en_edicion==""){

@@ -15,9 +15,11 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
     RecyclerView.Adapter<ListadoRutinasAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val tviExerciseName : TextView
+        val tvPreviewEj : TextView
         val butIniciar: Button
         init{
             tviExerciseName= view.findViewById(R.id.tvRutinaCreada)
+            tvPreviewEj = view.findViewById(R.id.tvPreviewEj)
             butIniciar= view.findViewById(R.id.butIniciarRutina)
         }
     }
@@ -35,6 +37,8 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tviExerciseName.text= "Rutina "+(position+1).toString()
+        holder.tvPreviewEj.text= "Ejercicio "+(position+1).toString()
+
         holder.butIniciar.setOnClickListener{
 
         }
