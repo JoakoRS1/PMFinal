@@ -54,7 +54,6 @@ class Slide5Fragment: Fragment() {
         tvPeso.setText(peso)
          //se crea el archivo rutinas
 
-
         butNext.setOnClickListener{
             Toast.makeText(context, "Datos ingresados completamente.", Toast.LENGTH_SHORT).show()
 
