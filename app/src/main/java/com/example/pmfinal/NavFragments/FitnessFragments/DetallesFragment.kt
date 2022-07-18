@@ -47,6 +47,5 @@ class DetallesFragment : Fragment() {
         Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
 
 
-
     }
 }
