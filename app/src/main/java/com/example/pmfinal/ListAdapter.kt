@@ -1,15 +1,13 @@
 package com.example.pmfinal
 
-import android.content.Context
-import android.content.DialogInterface
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.TextView
+import com.example.pmfinal.models.RM
 
- class ListAdapter(private val mlistaRM : List<RM>, private val mOnClickListener: (rm : RM)->Unit)
+class ListAdapter(private val mlistaRM : List<RM>, private val mOnClickListener: (rm : RM)->Unit)
      : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
      class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
          val tvRm: TextView

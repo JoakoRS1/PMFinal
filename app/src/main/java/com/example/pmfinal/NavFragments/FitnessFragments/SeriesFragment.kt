@@ -4,10 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ListAdapter
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.R
+import com.example.pmfinal.adapters.ListadoSeriesAdapter
+import com.example.pmfinal.models.RM
+import com.example.pmfinal.models.serie
 
 class SeriesFragment:Fragment() {
+    private lateinit var rvSeries : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -23,7 +31,26 @@ class SeriesFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var numSeries= 1
+        rvSeries= view.findViewById(R.id.rvSeriesReps)
+        val nombreEjercicio= view.findViewById<TextView>(R.id.tvEjNombre)
+        val butAgregarSerie= view.findViewById<Button>(R.id.butNewSerie)
 
+        nombreEjercicio.text=arguments?.getString("NOMBRE_EJERCICIO")
 
+        var series=mutableListOf<serie>()
+        series.add(serie(numSeries,0,0))
+
+        cargarSeries(series)
+
+        butAgregarSerie.setOnClickListener{
+            numSeries++
+            series.add(serie(numSeries,0,0))
+            cargarSeries(series)
+        }
+    }
+    fun cargarSeries(series: List<serie>){
+        val adapter= ListadoSeriesAdapter(series)
+        rvSeries.adapter=adapter
     }
 }
