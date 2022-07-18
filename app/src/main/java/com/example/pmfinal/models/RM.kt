@@ -1,4 +1,4 @@
-package com.example.pmfinal
+package com.example.pmfinal.models
 
 data class RM(
     val repM : String,

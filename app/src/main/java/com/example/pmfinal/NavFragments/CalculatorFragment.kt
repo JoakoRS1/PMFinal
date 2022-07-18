@@ -1,6 +1,5 @@
 package com.example.pmfinal.NavFragments
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,16 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pmfinal.ListAdapter
 import com.example.pmfinal.R
-import com.example.pmfinal.RM
+import com.example.pmfinal.models.RM
 import progresoFragment
 import kotlin.math.round
-import kotlin.Array
 
 class CalculatorFragment : Fragment() {
     private lateinit var rVrm : RecyclerView
