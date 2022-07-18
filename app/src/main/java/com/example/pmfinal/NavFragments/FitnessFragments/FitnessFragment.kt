@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import com.example.pmfinal.models.GestorEjercicios
 import com.example.pmfinal.models.Rutinas.RutinaCreate
 
 class FitnessFragment : Fragment() {
+
     private var bodyPartsfragment = BodyPartsFragment()
     private lateinit var rvRutinas : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +40,8 @@ class FitnessFragment : Fragment() {
 
         val newRutina = view.findViewById<LinearLayout>(R.id.butNewRutina)
         rvRutinas=view.findViewById(R.id.rvRutinas)
+
+
         var rutinas= RutinaCreate().ObtenerRutinas(requireContext())
 
         Log.d("cantidad de rutinas", rutinas.size.toString())
@@ -59,6 +63,7 @@ class FitnessFragment : Fragment() {
             ft.addToBackStack(null)
             ft.commit()
         }
+
 
 
 
