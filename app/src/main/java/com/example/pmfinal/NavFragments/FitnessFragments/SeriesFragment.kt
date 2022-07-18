@@ -56,8 +56,14 @@ class SeriesFragment:Fragment() {
 
         butAgregarSerie.setOnClickListener{
             numSeries++
-            series.add(serie(numSeries,etkg.text.toString().toInt(),etReps.text.toString().toInt()))
-            cargarSeries(series)
+            if(etkg.text.toString().equals("") and etReps.text.toString().equals("")){
+                //Toast.makeText(context, "Ingresar una peso y rep", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Ingrese un valor", Toast.LENGTH_SHORT).show()
+            }else{
+                series.add(serie(numSeries,etkg.text.toString().toInt(),etReps.text.toString().toInt()))
+                cargarSeries(series)
+            }
+
         }
         butSave.setOnClickListener{
             var ultimateListadoSeries= series

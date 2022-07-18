@@ -36,7 +36,7 @@
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
                 android:src="@drawable/ic_fitness_center_black_24dp"
-                app:tint="@color/white">
+                app:tint="@color/black">
 
             </ImageView>
 
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:text="0"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold"></TextView>
 
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="00/00/00"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="18sp">
 
                 </TextView>

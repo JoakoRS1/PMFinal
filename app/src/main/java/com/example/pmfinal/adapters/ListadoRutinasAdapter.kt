@@ -9,11 +9,16 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pmfinal.IntroFragments.Slide3Fragment
+import com.example.pmfinal.NavFragments.FitnessFragments.EjerciciosFragment
 import com.example.pmfinal.R
 import org.json.JSONObject
 
 class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
     RecyclerView.Adapter<ListadoRutinasAdapter.ViewHolder>(){
+
+    private val EjerciciosFragment = EjerciciosFragment()
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val tviExerciseName : TextView
         val tvPreviewEj : TextView
@@ -40,9 +45,8 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
         holder.tviExerciseName.text= "Rutina "+(position+1).toString()
         holder.tvPreviewEj.text= "Ejercicio "+(position+1).toString()
 
-        holder.butIniciar.setOnClickListener{
-            Log.d("ruti","empezó!!")
-        }
+
+
 
 
     }

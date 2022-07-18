@@ -166,7 +166,7 @@
                 android:id="@+id/rVrm"
                 android:layout_width="match_parent"
                 android:layout_height="449dp"
-                android:background="#FF6464"
+
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/list_listas_1rm" />
 
