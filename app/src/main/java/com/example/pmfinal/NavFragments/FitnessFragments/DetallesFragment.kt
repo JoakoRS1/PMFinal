@@ -45,5 +45,8 @@ class DetallesFragment : Fragment() {
         tvNombreEjercicioDetalle.text=name
 
         Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
+
+
+
     }
 }

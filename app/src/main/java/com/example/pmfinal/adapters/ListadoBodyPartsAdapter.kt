@@ -1,5 +1,6 @@
 package com.example.pmfinal.adapters
 
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,9 +36,6 @@ class ListadoBodyPartsAdapter (private val mListaBodyPArts : List<BodyPart>,
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tviPartName.text = mListaBodyPArts[position].bodyPart
-        val urlgif = mListaBodyPArts[position].gifUrl.toUri()
-
-        //Glide.with().load(urlgif).into(holder.tviPartImagen)
 
         holder.itemView.setOnClickListener {
             mOnItemClickListener(mListaBodyPArts[position])

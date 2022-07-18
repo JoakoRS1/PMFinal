@@ -42,7 +42,7 @@
     <TextView
         android:id="@+id/tvDescripcionEjercicio"
         android:layout_width="295dp"
-        android:layout_height="158dp"
+        android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,5 +51,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:layout_constraintVertical_bias="0.401" />
+
+    <Button
+        android:id="@+id/butElegir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Elegir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcionEjercicio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
