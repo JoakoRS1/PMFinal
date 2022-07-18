@@ -5,14 +5,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.pmfinal.R
+import com.example.pmfinal.settings.perfilFragment
 
 class DetallesFragment : Fragment() {
+
+    private val rutina= RutinaFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -32,6 +37,7 @@ class DetallesFragment : Fragment() {
         val tvNombreEjercicioDetalle= view.findViewById<TextView>(R.id.tvNombreEjercicioDetalle)
         val ivDetailGif= view.findViewById<ImageView>(R.id.ivGIFDETALLE)
         val tvDescripcionEjercicio= view.findViewById<TextView>(R.id.tvDescripcionEjercicio)
+        val butElegir= view.findViewById<Button>(R.id.butElegir)
 
         val name= (arguments?.getString("NOMBRE_EJERCICIO"))
         val equipment= arguments?.getString("EQUIPMENT")
@@ -46,6 +52,12 @@ class DetallesFragment : Fragment() {
 
         Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
 
+        butElegir.setOnClickListener {
+            val ft = requireActivity().supportFragmentManager?.beginTransaction()
+            ft!!.replace(R.id.fragment_container_main, rutina)
+            ft!!.addToBackStack(null)
+            ft!!.commit()
+        }
 
     }
 }
