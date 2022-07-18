@@ -128,28 +128,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/butCalcular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Calcular" />
-
-            <Space
-                android:layout_width="5dp"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
                 android:id="@+id/butGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,25 +139,27 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/butProgreso"
+                android:id="@+id/butCalcular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Progreso" />
+                android:text="Calcular" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="383dp"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rVrm"
                 android:layout_width="match_parent"
-                android:layout_height="300sp"
-                tools:listitem="@layout/list_listas_1rm"
+                android:layout_height="match_parent"
+                android:background="#FF6464"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:background="@color/purple_200"/>
+                tools:listitem="@layout/list_listas_1rm" />
+
         </LinearLayout>
 
 

@@ -23,6 +23,7 @@ class CalculatorFragment : Fragment() {
     private lateinit var rVrm : RecyclerView
     private val progreso= progresoFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
     }
 
@@ -37,7 +38,9 @@ class CalculatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
+
         rVrm =view.findViewById(R.id.rVrm)
         var lista = mutableListOf<RM>()
         var etReps =view.findViewById<EditText>(R.id.etReps)
@@ -46,18 +49,8 @@ class CalculatorFragment : Fragment() {
 
         val butGuardar = view.findViewById<Button>(R.id.butGuardar)
 
-        val butProgreso = view.findViewById<Button>(R.id.butProgreso)
 
-        butProgreso.setOnClickListener {
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
-            ft!!.replace(R.id.fragment_container_main, progreso)
-            ft!!.addToBackStack(null)
-            ft!!.commit()
-        }
-
-
-
-
+        if(lista_RM.size!=0) cargarListaRM(lista_RM)
 
         butCal?.setOnClickListener {
 
