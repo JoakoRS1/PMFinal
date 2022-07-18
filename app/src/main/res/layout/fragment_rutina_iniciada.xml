@@ -14,7 +14,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         tools:listitem="@layout/item_series_nuevo_ej" />
-
     <TextView
         android:id="@+id/tvRutinaIniciadaNom"
         android:layout_width="108dp"
