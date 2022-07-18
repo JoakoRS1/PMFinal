@@ -44,7 +44,6 @@ class NuevoEjerFragment: Fragment() {
                 Toast.makeText(context, "Ingrese nombre de ejercicio", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 
 }
