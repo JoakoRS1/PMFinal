@@ -38,7 +38,7 @@
     <Space
         android:id="@+id/espacio"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
+        android:layout_height="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/butNewRutina" />
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/espacio"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
 
         <androidx.recyclerview.widget.RecyclerView
