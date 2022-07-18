@@ -21,5 +21,10 @@ class Constantes {
             val NOTIFICATION_CHANNEL_DESCRIPTION = "Notification channel"
         }
     }
+    class listaRm{
+        companion object{
+            val lista_RM = mutableListOf<RM>()
+        }
+    }
 
 }
