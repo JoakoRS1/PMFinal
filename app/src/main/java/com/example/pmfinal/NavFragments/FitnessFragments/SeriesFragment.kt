@@ -105,6 +105,7 @@ class SeriesFragment:Fragment() {
         }
 
     }
+
     fun cargarSeries(series: List<serie>){
         val adapter= ListadoSeriesAdapter(series)
         rvSeries.adapter=adapter
