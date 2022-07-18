@@ -16,13 +16,13 @@ RecyclerView.Adapter<ListadoSeriesAdapter.ViewHolder>(){
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         val n_serie:TextView
-        val kg:EditText
-        val reps :EditText
+        val kg:TextView
+        val reps :TextView
 
         init{
-            n_serie=view.findViewById(R.id.tvNumRep)
-            kg=view.findViewById(R.id.etKG)
-            reps=view.findViewById(R.id.etReps)
+            n_serie=view.findViewById(R.id.tvRVNumSeries)
+            kg=view.findViewById(R.id.etRVKG)
+            reps=view.findViewById(R.id.etRVReps)
         }
     }
 
@@ -39,6 +39,7 @@ RecyclerView.Adapter<ListadoSeriesAdapter.ViewHolder>(){
         holder.n_serie.text=rm.serie.toString()
         holder.kg.setText(rm.kg.toString())
         holder.reps.setText(rm.reps.toString())
+
     }
 
     override fun getItemCount(): Int {
