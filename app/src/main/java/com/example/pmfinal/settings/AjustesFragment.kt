@@ -33,25 +33,38 @@ class AjustesFragment :Fragment() {
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        super.onViewCreated(view, savedInstanceState)
+
+        crearCanalNotificacion()
+
         val switch = view.findViewById<Switch>(R.id.switchNoti)
         switch?.setOnCheckedChangeListener { _, isChecked ->
-            val message = if (isChecked) "Switch1:ON" else "Switch1:OFF"
+            val message = if (isChecked) "Switch1:ON"
+            else "Switch1:OFF"
             val notif = crearNotificacion("OLIMPO",
                 "Notificaciones activadas!")
             NotificationManagerCompat.from(requireContext()).notify(
                 1,
                 notif
             )
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+            if(switch.isChecked){
+                Toast.makeText(requireContext(), "PRENDIDO", Toast.LENGTH_SHORT).show()
+                val notif = crearNotificacion("OLIMPO",
+                    "Notificaciones activadas!")
+                NotificationManagerCompat.from(requireContext()).notify(
+                    1,
+                    notif
+                )
+            }
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 
     private fun crearCanalNotificacion() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = Constantes.NotificationData.NOTIFICATION_CHANNEL_NAME
             val descriptionText = Constantes.NotificationData.NOTIFICATION_CHANNEL_DESCRIPTION
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val importance = NotificationManager.IMPORTANCE_HIGH
 
             val channel = NotificationChannel(
                 Constantes.NotificationData.NOTIFICATION_CHANNEL_ID,

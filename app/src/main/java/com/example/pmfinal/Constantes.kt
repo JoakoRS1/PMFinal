@@ -16,8 +16,8 @@ class Constantes {
     class NotificationData {
         companion object {
             val NOTIFICATION_CHANNEL_ID = "1"
-            val NOTIFICATION_CHANNEL_NAME = "AJUSTES"
-            val NOTIFICATION_CHANNEL_DESCRIPTION = "Noti channel"
+            val NOTIFICATION_CHANNEL_NAME = "LOGIN"
+            val NOTIFICATION_CHANNEL_DESCRIPTION = "Notification channel"
         }
     }
 
