@@ -14,6 +14,7 @@ import com.example.pmfinal.Constantes
 import com.example.pmfinal.R
 import com.example.pmfinal.adapters.ListadoBodyPartsAdapter
 import com.example.pmfinal.models.GestorEjercicios
+import com.example.pmfinal.models.beans.BodyPart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -60,12 +61,14 @@ class BodyPartsFragment : Fragment() {
                 cargarBodyParts(lista)
             }
     }
-    fun cargarBodyParts(lista:List<String>){
+    fun cargarBodyParts(lista:List<BodyPart>){
         val adapter = ListadoBodyPartsAdapter(lista){
             Log.i("ListadoBodyPartsAdapter", "Se hizo click en " + it);
 
             val bundle= Bundle()
-            bundle.putString("NOMBRE_BODY_PART", it)
+            bundle.putString("NOMBRE_BODY_PART", it.bodyPart)
+
+
             val fragEjercicios= EjerciciosFragment()
             fragEjercicios.arguments= bundle
 

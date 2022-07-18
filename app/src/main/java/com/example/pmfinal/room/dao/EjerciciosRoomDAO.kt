@@ -11,8 +11,8 @@ interface EjerciciosRoomDAO {
     @Query("SELECT * FROM EjerciciosRoom")
     fun getAll() : List<EjerciciosRoom>
 
-    @Query("SELECT bodyPart FROM EjerciciosRoom GROUP BY bodyPart")
-    fun getAllBodyParts() : List<String>
+    @Query("SELECT bodyPart, gifUrl,id FROM EjerciciosRoom GROUP BY bodyPart")
+    fun getAllBodyParts() : List<BodyPartsRoom>
 
     @Query("SELECT * FROM EjerciciosRoom WHERE bodyPart=:bodyPart")
     fun ExercisesByBodyParts(bodyPart:String) : List<EjerciciosRoom>

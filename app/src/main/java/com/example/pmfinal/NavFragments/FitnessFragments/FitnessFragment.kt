@@ -32,7 +32,7 @@ class FitnessFragment : Fragment() {
         val newRutina = view.findViewById<LinearLayout>(R.id.butNewRutina)
 
         newRutina.setOnClickListener {
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
             ft.replace(R.id.fragment_container_main, bodyPartsfragment)
             ft.addToBackStack(null)
             ft.commit()

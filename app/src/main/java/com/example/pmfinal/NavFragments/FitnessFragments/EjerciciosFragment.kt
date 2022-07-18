@@ -49,7 +49,7 @@ class EjerciciosFragment:Fragment() {
             fragDetalles.arguments= bundle
 
             //Ir a FragmentDetalles
-            val ft = requireActivity().supportFragmentManager?.beginTransaction()
+            val ft = requireActivity().supportFragmentManager.beginTransaction()
             ft.replace(R.id.fragment_container_main, fragDetalles)
             ft.addToBackStack(null)
             ft.commit()
