@@ -48,6 +48,7 @@ class SeriesFragment:Fragment() {
 
 
         val ej_nom=arguments?.getString("NOMBRE_EJERCICIO")
+
         nombreEjercicio.text=ej_nom
 
         var series=mutableListOf<serie>()
