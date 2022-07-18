@@ -93,6 +93,8 @@ class CalculatorFragment : Fragment() {
                 val actualrm = RM(RPMAX,fechaMAX,"");
 
                 lista_RM.add(actualrm)
+
+
                 cargarListaRM(lista_RM)
 
             }
@@ -110,6 +112,7 @@ class CalculatorFragment : Fragment() {
         val adapter = ListAdapter(lista) {
             Log.i("Fragment", "Se hizo click en el " + it.repM);
         }
+
         rVrm.adapter = adapter
     }
 
