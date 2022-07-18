@@ -33,6 +33,7 @@ class EjerciciosFragment:Fragment() {
 
         val recyclerView= view.findViewById<RecyclerView>(R.id.rvExercises)
         val fragDetalles= DetallesFragment()
+        val fragRutina= RutinaFragment()
 
         val adapter = ListadoExercisesAdapter(listaEjercicios){
             val bundle= Bundle()
@@ -47,6 +48,7 @@ class EjerciciosFragment:Fragment() {
             Log.d("valselec:",it.target)
 
             fragDetalles.arguments= bundle
+            fragRutina.arguments= bundle
 
             //Ir a FragmentDetalles
             val ft = requireActivity().supportFragmentManager.beginTransaction()

@@ -16,7 +16,6 @@ import com.example.pmfinal.settings.perfilFragment
 
 class DetallesFragment : Fragment() {
 
-    private val rutina= RutinaFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +32,8 @@ class DetallesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val fragRutina= RutinaFragment()
 
         val tvNombreEjercicioDetalle= view.findViewById<TextView>(R.id.tvNombreEjercicioDetalle)
         val ivDetailGif= view.findViewById<ImageView>(R.id.ivGIFDETALLE)
@@ -52,9 +53,10 @@ class DetallesFragment : Fragment() {
 
         Glide.with(requireContext()).load(urlgif).into(ivDetailGif)
 
+
         butElegir.setOnClickListener {
             val ft = requireActivity().supportFragmentManager?.beginTransaction()
-            ft!!.replace(R.id.fragment_container_main, rutina)
+            ft!!.replace(R.id.fragment_container_main, fragRutina)
             ft!!.addToBackStack(null)
             ft!!.commit()
         }
