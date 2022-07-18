@@ -5,7 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tvRutinaIniciadaNom"
+        android:layout_width="298dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="40dp"
+        android:text="Ejercicio 1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="37dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_baseline_access_time_filled_24"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutinaIniciadaNom"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ImageView>
+
+    <Chronometer
+        android:id="@+id/cronometro"
+        android:layout_width="78dp"
+        android:layout_height="32dp"
+        android:paddingBottom="5dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvRutinaIniciadaNom"
+        app:layout_constraintVertical_bias="0.0">
+
+    </Chronometer>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSeriesInicio"
         android:layout_width="228dp"
         android:layout_height="259dp"
         android:layout_marginTop="4dp"
@@ -14,17 +53,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         tools:listitem="@layout/item_series_nuevo_ej" />
-    
-    <TextView
-        android:id="@+id/tvRutinaIniciadaNom"
-        android:layout_width="108dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="48dp"
-        android:text="Ejercicio 1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
