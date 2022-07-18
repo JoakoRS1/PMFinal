@@ -51,11 +51,17 @@ class HorarioFragment: Fragment() {
         cambiarcolor(butSab, dias)
 
         GuardarHorario.setOnClickListener{
+
+
+
+
+            val fm= this.parentFragmentManager
+            fm.popBackStack()
         }
 
     }
 
-    private fun cambiarcolor(boton: Button, listaDias: MutableList<String>){
+    private fun cambiarcolor(boton: Button, listaDias: MutableList<String>): MutableList<String>{
         boton.setOnClickListener {
             boton.isEnabled = false;
             boton.setBackgroundColor(Color.BLUE)
@@ -63,7 +69,7 @@ class HorarioFragment: Fragment() {
             Log.i("dia", dia)
             listaDias.add(dia)
         }
-
+        return listaDias
     }
 
 }
