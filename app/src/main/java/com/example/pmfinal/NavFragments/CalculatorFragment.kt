@@ -79,9 +79,6 @@ class CalculatorFragment : Fragment() {
             val tvRMest = view.findViewById<TextView>(R.id.tvRMest)
             if (txtReps.length>0 && txtPeso.length>0){
 
-
-
-
                 var peso = round(txtPeso!!.toString().toInt() / ( 1.0278 - 0.0278 * txtReps!!.toString().toInt() ))
                 tvRMest.setText(peso.toString())
 
@@ -92,17 +89,14 @@ class CalculatorFragment : Fragment() {
                 val fechaMAX = currentDate ;
                 val actualrm = RM(RPMAX,fechaMAX,"");
 
-
+                lista_RM.add(actualrm)
+                cargarListaRM(lista_RM)
 
             }
             else{
                 tvRMest.setText("Ingrese algun dato")
             }
         }
-
-
-                lista_RM.add(actualrm)
-                cargarListaRM(lista_RM)
 
     }
     private fun cargarListaRM(lista: List<RM>) {

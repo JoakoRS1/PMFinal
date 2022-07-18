@@ -1,5 +1,7 @@
 package com.example.pmfinal
 
+import com.example.pmfinal.models.RM
+
 class Constantes {
     companion object {
         val NOMBRE_SP = "SP_GYMBRO"
