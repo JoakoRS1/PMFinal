@@ -92,7 +92,8 @@ class CalculatorFragment : Fragment() {
                 val fechaMAX = currentDate ;
                 val actualrm = RM(RPMAX,fechaMAX,"");
 
-
+                lista_RM.add(actualrm)
+                cargarListaRM(lista_RM)
 
             }
             else{
@@ -101,8 +102,7 @@ class CalculatorFragment : Fragment() {
         }
 
 
-                lista_RM.add(actualrm)
-                cargarListaRM(lista_RM)
+
 
     }
     private fun cargarListaRM(lista: List<RM>) {

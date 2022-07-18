@@ -35,21 +35,21 @@ class Slide5Fragment: Fragment() {
         var butNext= view.findViewById<Button>(R.id.button)
         var tvuserName= view.findViewById<TextView>(R.id.tvUserName)
         var tvGenero= view.findViewById<TextView>(R.id.tvGenero)
-        //var tvEdad= view.findViewById<TextView>(R.id.tvEdad)
+        var tvEdad= view.findViewById<TextView>(R.id.tvEdad)
         var tvPeso= view.findViewById<TextView>(R.id.tvPeso)
         var tvAltura= view.findViewById<TextView>(R.id.tvAltura)
 
         val sp = requireActivity().getSharedPreferences(Constantes.NOMBRE_SP, Context.MODE_PRIVATE)
         val username = sp.getString(Constantes.SP_USERNAME, "")
         val genero = sp.getString(Constantes.SP_GENERO, "")
-        //val edad = sp.getString(Constantes.SP_EDAD, "")
+        val edad = sp.getString(Constantes.SP_EDAD, "")
         val peso = sp.getString(Constantes.SP_PESO, "")
         val altura = sp.getString(Constantes.SP_ALTURA, "")
 
 
         tvuserName.setText(username)
         tvGenero.setText(genero)
-        //tvEdad.setText(edad)
+        tvEdad.setText(edad)
         tvAltura.setText(altura)
         tvPeso.setText(peso)
          //se crea el archivo rutinas
