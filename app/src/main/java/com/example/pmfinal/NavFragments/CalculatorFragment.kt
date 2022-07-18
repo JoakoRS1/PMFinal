@@ -23,7 +23,6 @@ class CalculatorFragment : Fragment() {
     private lateinit var rVrm : RecyclerView
     private val progreso= progresoFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
     }
 
@@ -38,9 +37,7 @@ class CalculatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         super.onViewCreated(view, savedInstanceState)
-
         rVrm =view.findViewById(R.id.rVrm)
         var lista = mutableListOf<RM>()
         var etReps =view.findViewById<EditText>(R.id.etReps)

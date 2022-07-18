@@ -7,22 +7,10 @@
     tools:context=".NavFragments.FitnessFragments.FitnessFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        --aca va un recycler view con los botones para las rutinas
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/butNewRutina"
         android:layout_width="351dp"
         android:layout_height="153dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:background="@color/purple_200"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,8 +21,8 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="10"
             android:layout_gravity="center"
+            android:layout_weight="10"
             android:src="@drawable/new_rutina" />
 
         <TextView
@@ -45,6 +33,35 @@
             android:text="Nueva Rutina"
             android:textAlignment="center"
             android:textSize="24sp" />
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butNewRutina" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/espacio"
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRutinas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/rutinas_creadas" />
     </LinearLayout>
 
 

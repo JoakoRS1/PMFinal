@@ -12,7 +12,8 @@ class Constantes {
         val SP_ALTURA= "ALTURA"
         val SP_IMC= "IMC"
         val SP_ESTA_SINCRONIZADO= "ESTA_SINCRONIZADO"
-        val RUTINAS="RUTINA_ACTUAL"
+        val RUTINAS="NUM_RUTINAS"
+        val RUT_EDITED= "RUTINA_SIENDO_EDITADA"
 
     }
 
