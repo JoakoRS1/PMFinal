@@ -42,8 +42,18 @@ class ListadoRutinasAdapter (private val mListaExercises : List<JSONObject>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        var ejr= mListaExercises[position].getJSONArray("ejercicios")
+
+        var l_ejercicios= ""
+
+        for (i in 0 until ejr.length()){
+            var ejercicioguardado= ejr[i] as JSONObject
+            l_ejercicios+=ejercicioguardado.get("nombre")
+            l_ejercicios+="."
+        }
+
         holder.tviExerciseName.text= "Rutina "+(position+1).toString()
-        holder.tvPreviewEj.text= "Ejercicio "+(position+1).toString()
+        holder.tvPreviewEj.text= "Ejercicios: "+l_ejercicios.toString()
 
 
 

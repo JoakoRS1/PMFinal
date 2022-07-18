@@ -14,8 +14,8 @@ class RutinaCreate{
     fun crearRutina(context: Context, ejercicio:JSONObject) {
         val rutinasCreadas= verificarRutinaActual(context)+1
 
-        val ejercicios= mutableListOf<JSONObject>()
-        ejercicios.add(ejercicio)
+        val ejercicios= JSONArray()
+        ejercicios.put(ejercicio)
 
         val newRutina= JSONObject()
 
@@ -63,7 +63,7 @@ class RutinaCreate{
 
             var j=0
             while (j<rutinasCreadas) {
-                context.openFileInput("Rutina" + rutinasCreadas.toString() + ".json").use {
+                context.openFileInput("Rutina" + (j+1).toString() + ".json").use {
                     var json =it.bufferedReader().readText()
                     var jsonobj= JSONObject(json)
                     arrjson.add(jsonobj)
@@ -78,6 +78,32 @@ class RutinaCreate{
     }
 
     fun actualizarRutina(context: Context, ejercicio:JSONObject){
+        var rutinaAEditar=verificarRutinaActual(context)
+        context.openFileInput("Rutina"+rutinaAEditar.toString()+".json").use {
+            var json= it.bufferedReader().readText()
+            var rutinaUpdate= JSONObject(json)
+
+            Log.d("rutinasupdateadas",rutinaUpdate.toString())
+            var ejercicios= rutinaUpdate.getJSONArray("ejercicios")
+
+            var l_ejercicios_new = mutableListOf<JSONObject>()
+
+            for (i in 0 until ejercicios.length()){
+                var ejercicioguardado= ejercicios[i] as JSONObject
+                l_ejercicios_new.add(ejercicioguardado)
+            }
+            l_ejercicios_new.add(ejercicio)
+            rutinaUpdate.put("ejercicios", l_ejercicios_new)
+            Log.d("rutinasupdateadas",l_ejercicios_new.toString())
+
+
+
+/*
+            context.openFileOutput("Rutina"+rutinaAEditar.toString()+".json", Context.MODE_PRIVATE)
+                .use {
+                    it.write(rutinaUpdate.toString().toByteArray())
+                }*/
+        }
 
     }
 }

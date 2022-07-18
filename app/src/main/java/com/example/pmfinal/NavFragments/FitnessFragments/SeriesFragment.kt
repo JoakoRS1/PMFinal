@@ -69,11 +69,14 @@ class SeriesFragment:Fragment() {
 
         }
         butEjercicio.setOnClickListener {
+            var ultimateListadoSeries= series
+            crearOactualizarRutina(requireContext(), ultimateListadoSeries,ej_nom!!)
+
             val editor = requireActivity().getSharedPreferences(
                 Constantes.NOMBRE_SP,
                 AppCompatActivity.MODE_PRIVATE
             ).edit()
-            editor.putString(Constantes.RUT_EDITED, "") //LA RUTINA SE DEBE CREAR
+            editor.putString(Constantes.RUT_EDITED, "EDITAR_ULTIMA") //LA RUTINA SE DEBE CREAR
             editor.commit()
 
             val ft = requireActivity().supportFragmentManager.beginTransaction()
