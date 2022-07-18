@@ -7,6 +7,7 @@ import android.os.Build
 import android.system.Os.open
 import android.util.Log
 import com.example.pmfinal.Constantes
+import com.example.pmfinal.models.beans.BodyPart
 import com.example.pmfinal.models.beans.Ejercicio
 import com.example.pmfinal.room.AppDatabase
 import com.example.pmfinal.room.dao.EjerciciosRoomDAO
@@ -56,14 +57,18 @@ class GestorEjercicios {
         )
         Log.d("seguardo", result[0])
     }
-    fun obtenerListaBodyParts (context : Context) : List<String> {
+    fun obtenerListaBodyParts (context : Context) : List<BodyPart> {
         val daoBodyParts : EjerciciosRoomDAO = AppDatabase.getInstance(
             context).getEjerciciosRoomDAO()
 
         val listaRoom = daoBodyParts.getAllBodyParts()
+        val info = listaRoom.map {
+            BodyPart(it.bodyPart, it.gifUrl)
+        }
+
         Log.d("tamaolista", listaRoom.size.toString())
 
-        return listaRoom
+        return info
     }
     fun MostrarListadoEjercicios(context: Context, filtro: String): List<Ejercicio>{
         val daoBodyParts : EjerciciosRoomDAO = AppDatabase.getInstance(context).getEjerciciosRoomDAO()

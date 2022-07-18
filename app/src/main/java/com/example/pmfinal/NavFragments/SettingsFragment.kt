@@ -12,8 +12,8 @@ import com.example.pmfinal.settings.AjustesFragment
 import com.example.pmfinal.settings.perfilFragment
 
 class SettingsFragment : Fragment() {
-    private val perfil= AjustesFragment()
-    private val ajustes= perfilFragment()
+    private val ajustes= AjustesFragment()
+    private val perfil= perfilFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

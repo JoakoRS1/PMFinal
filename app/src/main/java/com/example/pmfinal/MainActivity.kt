@@ -25,8 +25,25 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_main)
         replaceFragment(calculator)
 
-
         val bottomNav= findViewById<BottomNavigationView>(R.id.bottomNav)
+        var etReps =findViewById<EditText>(R.id.etReps)
+        var etPeso =findViewById<EditText>(R.id.etPeso)
+        val butCal = findViewById<Button>(R.id.butCalcular)
+
+
+        butCal?.setOnClickListener {
+
+            val txtReps=etReps!!.getText()
+            val txtPeso=etPeso!!.getText()
+            val tvRMest = findViewById<TextView>(R.id.tvRMest)
+            if (txtPeso.length>0 && tvRMest.length()>0){
+                val peso = txtReps!!.toString().toInt() *(1+(txtPeso!!.toString().toInt()/30))
+                tvRMest.setText(peso.toString())
+            }
+            else{
+                tvRMest.setText("Ingrese algun dato")
+            }
+        }
 
         bottomNav.setOnItemSelectedListener {
             when(it.itemId){

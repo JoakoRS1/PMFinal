@@ -8,6 +8,9 @@ import androidx.room.PrimaryKey
 data class BodyPartsRoom (
 
     @ColumnInfo(name = "bodyPart")
+    val bodyPart : String,
+    @ColumnInfo(name = "gifUrl")
+    val gifUrl : String,
 
     @PrimaryKey( autoGenerate = true)
     val id : String

@@ -23,7 +23,8 @@ class ListadoExercisesAdapter (private val mListaExercises : List<Ejercicio>,
         parent: ViewGroup,
         viewType: Int
     ): ListadoExercisesAdapter.ViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(R.layout.item_exercise,parent,false)
+        val view= LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_exercise,parent,false)
         val viewHolder= ViewHolder(view)
 
         return viewHolder

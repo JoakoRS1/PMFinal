@@ -31,5 +31,8 @@ class IntroActivity : AppCompatActivity() {
         val username = sp.getString(Constantes.SP_USERNAME, "")!!
 
         return username != ""
+
+
+
     }
 }
