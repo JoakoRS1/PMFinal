@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Base application theme. -->
     <style name="Theme.PMFinal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -14,7 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="slpashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/ic_olimpo_logo</item>
+
+        <item name="android:windowBackground"
+            android:background="@color/purple_500">@drawable/ic_olimpo_owo__1_</item>
 
     </style>
 </resources>
